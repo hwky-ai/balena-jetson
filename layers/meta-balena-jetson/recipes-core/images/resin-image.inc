@@ -112,6 +112,7 @@ IMAGE_INSTALL_append_jetson-tx2 = " \
     cuda-driver \
     tegra-libraries \
     libnvidia-container-tools \
+    go-runtime \
     nvidia-container-toolkit \
 "
 
