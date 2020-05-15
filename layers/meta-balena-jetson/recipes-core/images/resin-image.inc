@@ -83,6 +83,12 @@ IMAGE_INSTALL_append_jetson-nano = " \
     tegra-nvpmodel \
     tegra-configs-nvstartup \
     tegra-configs-udev \
+    cuda-driver \
+    tegra-libraries \
+    libnvidia-container-tools \
+    go-runtime \
+    nvidia-container-toolkit \
+    tegra-argus-daemon \
 "
 
 IMAGE_INSTALL_append_jetson-xavier = " \
