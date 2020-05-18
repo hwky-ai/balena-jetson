@@ -68,7 +68,7 @@ RESIN_BOOT_PARTITION_FILES_jetson-tx1 = " \
 # Although current space seems enough just for libcuda, it's still not enough for
 # testing first with all the files in tegra-libraries, to ensure the docker patches work fine.
 # So let's double the size just for now, while testing.
-IMAGE_ROOTFS_SIZE = "974848"
+IMAGE_ROOTFS_SIZE = "1462272"
 
 # Need space for all the above signed update binaries
 RESIN_BOOT_SIZE_jetson-nano = "80960"
@@ -89,6 +89,12 @@ IMAGE_INSTALL_append_jetson-nano = " \
     go-runtime \
     nvidia-container-toolkit \
     tegra-argus-daemon \
+    nvidia-container-runtime \
+    cudnn \
+    tensorrt \
+    libvisionworks \
+    libvisionworks-sfm \
+    libvisionworks-tracking \
 "
 
 IMAGE_INSTALL_append_jetson-xavier = " \
