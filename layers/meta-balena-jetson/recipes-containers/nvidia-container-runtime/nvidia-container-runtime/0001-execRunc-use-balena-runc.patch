@@ -1,0 +1,30 @@
+From cff766be57ada6d3d3addd8a8aad08e0731c822f Mon Sep 17 00:00:00 2001
+From: Pelle van Gils <pelle@hwky.ai>
+Date: Tue, 19 May 2020 20:22:05 +0000
+Subject: [PATCH] execRunc: use 'balena-runc'
+
+---
+ src/github.com/NVIDIA/nvidia-container-runtime/main.go | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/github.com/NVIDIA/nvidia-container-runtime/main.go b/src/github.com/NVIDIA/nvidia-container-runtime/main.go
+index f5335bc..b982609 100644
+--- a/src/github.com/NVIDIA/nvidia-container-runtime/main.go
++++ b/src/github.com/NVIDIA/nvidia-container-runtime/main.go
+@@ -75,10 +75,10 @@ func exitOnError(err error, msg string) {
+ }
+ 
+ func execRunc() {
+-	fileLogger.Println("Looking for \"docker-runc\" binary")
+-	runcPath, err := exec.LookPath("docker-runc")
++	fileLogger.Println("Looking for \"balena-runc\" binary")
++	runcPath, err := exec.LookPath("balena-runc")
+ 	if err != nil {
+-		fileLogger.Println("\"docker-runc\" binary not found")
++		fileLogger.Println("\"balena-runc\" binary not found")
+ 		fileLogger.Println("Looking for \"runc\" binary")
+ 		runcPath, err = exec.LookPath("runc")
+ 		exitOnError(err, "find runc path")
+-- 
+2.17.1
+

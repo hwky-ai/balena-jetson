@@ -8,4 +8,6 @@ do_install_append(){
     install -d ${D}${sysconfdir}/systemd/system/balena.service.d
     install -c -m 0644 ${WORKDIR}/balena-nvidia.conf \
         ${D}${sysconfdir}/systemd/system/balena.service.d/balena.conf
+        sed -i "s/@BALENA_STORAGE@/${BALENA_STORAGE}/g" \
+            ${D}${sysconfdir}/systemd/system/balena.service.d/balena.conf
 }
