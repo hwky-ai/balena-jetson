@@ -78,6 +78,9 @@ RESIN_BOOT_SIZE_jetson-tx1="80960"
 
 PARTITION_TABLE_TYPE = "gpt"
 
+# nvvideosinks requires x11. Let's hope we do not need it
+# gstreamer1.0-plugins-nvvideosinks
+
 IMAGE_INSTALL_append_jetson-nano = " \
     tegra210-flash \
     tegra-nvpmodel \
@@ -95,6 +98,16 @@ IMAGE_INSTALL_append_jetson-nano = " \
     libvisionworks \
     libvisionworks-sfm \
     libvisionworks-tracking \
+    gstreamer1.0 \
+    gstreamer1.0-libav \
+    gstreamer1.0-meta-base \
+    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-ugly \
+    gstreamer1.0-omx-tegra \
+    gstreamer1.0-plugins-nveglgles \
+    gstreamer1.0-plugins-nvvideo4linux2 \
 "
 
 IMAGE_INSTALL_append_jetson-xavier = " \
