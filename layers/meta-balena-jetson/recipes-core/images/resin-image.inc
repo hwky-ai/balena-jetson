@@ -89,7 +89,6 @@ IMAGE_INSTALL_append_jetson-nano = " \
     go-runtime \
     nvidia-container-toolkit \
     tegra-argus-daemon \
-    nvidia-container-runtime \
     cudnn \
     tensorrt \
     libvisionworks \
