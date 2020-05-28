@@ -23,6 +23,7 @@ SRC_URI = " \
     "
 
 KERNEL_DEVICETREE_jetson-xavier-nx-devkit-emmc = "${DEPLOY_DIR_IMAGE}/tegra194-p3668-all-p3509-0000.dtb"
+KERNEL_DEVICETREE_photon-xavier-nx = "${DEPLOY_DIR_IMAGE}/tegra194-xavier-nx-cti-NGX003.dtb"
 DTBFILE ?= "${@os.path.basename(d.getVar('KERNEL_DEVICETREE', True).split()[0])}"
 LNXSIZE ?= "67108864"
 
