@@ -170,6 +170,21 @@ RESIN_CONFIGS[tlc591xx] = " \
                 CONFIG_LEDS_TLC591XX=m \
 "
 
+RESIN_CONFIGS_append_photon-xavier-nx = " wwan"
+RESIN_CONFIGS[wwan] = " \
+                CONFIG_USB_WDM=m \
+                CONFIG_USB_SIERRA_NET=m \
+                CONFIG_USB_NET_CDC_MBIM=m \
+                CONFIG_USB_NET_CDC_NCM=m \
+                CONFIG_USB_NET_QMI_WWAN=m \
+                CONFIG_USB_SERIAL_WWAN=m \
+                CONFIG_MII=m \
+"
+
+RESIN_CONFIGS_DEPS[wwan] = " \
+                CONFIG_USB_USBNET=m \
+"
+
 KERNEL_MODULE_AUTOLOAD_srd3-tx2 += " nvhost-vi-tpg "
 KERNEL_MODULE_PROBECONF_srd3-tx2 += " nvhost-vi-tpg tegra-udrm"
 
