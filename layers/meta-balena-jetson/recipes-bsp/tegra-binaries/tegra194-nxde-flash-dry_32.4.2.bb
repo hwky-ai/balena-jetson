@@ -303,8 +303,8 @@ do_configure() {
     dd if=${DEPLOY_DIR_IMAGE}/bootfiles/cboot_t194_sigheader.bin.encrypt of=boot0.img seek=12058624 bs=1 conv=notrunc
     dd if=${DEPLOY_DIR_IMAGE}/bootfiles/cboot_t194_sigheader.bin.encrypt of=boot0.img seek=13500416 bs=1 conv=notrunc
 
-    dd if=${DEPLOY_DIR_IMAGE}/bootfiles/tegra194-p3668-all-p3509-0000_sigheader.dtb.encrypt of=boot0.img seek=14942208 bs=1 conv=notrunc
-    dd if=${DEPLOY_DIR_IMAGE}/bootfiles/tegra194-p3668-all-p3509-0000_sigheader.dtb.encrypt of=boot0.img seek=15400960 bs=1 conv=notrunc
+    dd if=${DEPLOY_DIR_IMAGE}/bootfiles/${DTBNAME}_sigheader.dtb.encrypt of=boot0.img seek=14942208 bs=1 conv=notrunc
+    dd if=${DEPLOY_DIR_IMAGE}/bootfiles/${DTBNAME}_sigheader.dtb.encrypt of=boot0.img seek=15400960 bs=1 conv=notrunc
 
     dd if=${DEPLOY_DIR_IMAGE}/bootfiles/bmp.blob of=boot0.img seek=15859712 bs=1 conv=notrunc
     dd if=${DEPLOY_DIR_IMAGE}/bootfiles/bmp.blob of=boot0.img seek=16056320 bs=1 conv=notrunc
