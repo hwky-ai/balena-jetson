@@ -130,6 +130,17 @@ IMAGE_INSTALL_append_jetson-xavier-nx-devkit-emmc = " \
     tegra-configs-nvstartup \
     tegra-configs-udev \
     mtd-utils \
+    nvidia-container-toolkit \
+    cuda-driver \
+    tegra-libraries \
+    libnvidia-container-tools \
+    go-runtime \
+    tegra-argus-daemon \
+    tensorrt \
+    libvisionworks-sfm \
+    libvisionworks-tracking \
+    gstreamer1.0-plugins-nvvideo4linux2 \
+    gstreamer1.0-plugins-nvvideosinks \
 "
 
 IMAGE_INSTALL_append_jetson-tx2 = " \
