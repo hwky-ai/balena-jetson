@@ -105,6 +105,10 @@ IMAGE_INSTALL_append_jetson-nano = " \
     tegra-nvpmodel \
     tegra-configs-nvstartup \
     tegra-configs-udev \
+    cuda-driver \
+    tegra-libraries \
+    libnvidia-container-tools \
+    nvidia-container-toolkit \
 "
 
 IMAGE_INSTALL_append_jetson-nano-emmc = " \
