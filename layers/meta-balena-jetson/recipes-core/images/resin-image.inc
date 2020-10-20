@@ -185,3 +185,7 @@ IMAGE_INSTALL_append_jetson-tx1 = " \
     linux-firmware-bcm4354 \
     bt-scripts \
 "
+
+IMAGE_INSTALL_append = " \
+    packagegroup-balena-nvidia-gpu \
+"
