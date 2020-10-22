@@ -101,6 +101,9 @@ IMAGE_ROOTFS_SIZE = "487424"
 # Bootloader blob is 32MB on the NX
 IMAGE_ROOTFS_SIZE_jetson-xavier-nx-devkit-emmc = "733184"
 IMAGE_ROOTFS_SIZE_jetson-xavier-nx-devkit = "733184"
+# need space for tegra-libraries etc.
+IMAGE_ROOTFS_SIZE_jetson-nano = "733184"
+IMAGE_ROOTFS_SIZE_jetson-nano-emmc = "733184"
 
 # Need space for all the above signed update binaries
 RESIN_BOOT_SIZE_jetson-nano = "80960"
